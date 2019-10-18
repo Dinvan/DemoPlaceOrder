@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip">
+
+            <ImageView
+                android:id="@+id/list_image"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Product Name"
+            android:textColor="#040404"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/cart_plus_minus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtItemName"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cart_product_quantity_tv"
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/rectangle_border"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="10"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/plist_weight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:entries="@array/units"
+                android:text="100 gm"
+                android:gravity="center"
+                android:textColor="#343434"
+                android:textSize="12dip" />
+
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_below="@+id/cart_plus_minus_layout"
+            android:id="@+id/notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:hint="Tap to add some notes...."
+            android:background="@android:color/transparent"
+            android:visibility="visible"
+            android:textColor="#040404"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

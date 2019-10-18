@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Place Order</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="units">
+        <item>gm</item>
+        <item>kg</item>
+        <item>Unit</item>
+        <item>Amount</item>
+    </string-array>
+</resources>
