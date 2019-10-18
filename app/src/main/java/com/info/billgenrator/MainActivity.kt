@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             it.title="My List"
         }
         var list=ArrayList<ShoppingListModel>()
-        list.add(ShoppingListModel(4,"Test 1"))
-        list.add(ShoppingListModel(3,"Test 18"))
+        list.add(ShoppingListModel(4,"Grocery"))
+        list.add(ShoppingListModel(3,"F"))
         list.add(ShoppingListModel(8,"Test 5"))
         list.add(ShoppingListModel(8,"Test 1r"))
         list.add(ShoppingListModel(2,"Test 1e"))
