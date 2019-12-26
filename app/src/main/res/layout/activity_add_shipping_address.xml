@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
+                android:maxLength="10"
                 android:hint="*House no">
 
             </com.google.android.material.textfield.TextInputEditText>
@@ -39,6 +40,7 @@
                 android:imeOptions="actionNext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxLength="200"
                 android:hint="Apartment name">
 
             </com.google.android.material.textfield.TextInputEditText>
@@ -57,6 +59,7 @@
             android:imeOptions="actionNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLength="200"
             android:hint="Street details to locate you">
 
         </com.google.android.material.textfield.TextInputEditText>
@@ -73,6 +76,7 @@
             android:layout_width="match_parent"
             android:imeOptions="actionNext"
             android:layout_height="wrap_content"
+            android:maxLength="200"
             android:hint="Landmark for easy reach out">
 
         </com.google.android.material.textfield.TextInputEditText>
@@ -89,6 +93,7 @@
             android:layout_width="match_parent"
             android:imeOptions="actionNext"
             android:layout_height="wrap_content"
+            android:maxLength="200"
             android:hint="*Area Detail">
 
         </com.google.android.material.textfield.TextInputEditText>
@@ -110,6 +115,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxLength="50"
                 android:hint="City">
 
             </com.google.android.material.textfield.TextInputEditText>
@@ -125,6 +131,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="8"
                 android:hint="Pincode">
 
             </com.google.android.material.textfield.TextInputEditText>
@@ -139,6 +147,7 @@
         android:text="Choose nick name for this address"></TextView>
 
     <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -173,4 +182,16 @@
             app:chipStrokeWidth="1dp"
             app:chipBackgroundColor="@color/bg_chip_state_list" />
     </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/chkDefaultAddress"
+        android:layout_below="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:text="Set as my default address"
+        android:layout_height="wrap_content"></com.google.android.material.checkbox.MaterialCheckBox>
+    <com.google.android.material.button.MaterialButton
+        android:layout_below="@+id/chkDefaultAddress"
+        android:layout_width="match_parent"
+        android:text="Add Address"
+        android:layout_height="wrap_content"></com.google.android.material.button.MaterialButton>
 </RelativeLayout>
