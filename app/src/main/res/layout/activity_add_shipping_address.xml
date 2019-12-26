@@ -1,107 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
     tools:context=".AddShippingAddress">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilHouseNo"
+    <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:hint="*House No"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:hint="House No"
-            android:layout_height="wrap_content">
+        android:orientation="horizontal">
 
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilHouseNo"
+            style="@style/text_input_layout_style"
+            android:layout_width="wrap_content"
+            android:layout_weight=".5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="*House no">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilApartment"
+            style="@style/text_input_layout_style"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/tilHouseNo"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:imeOptions="actionNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apartment name">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_below="@+id/tilHouseNo"
-        android:id="@+id/tilApartment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:hint="Apartment name"
-            android:layout_height="wrap_content">
-
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_below="@+id/tilApartment"
         android:id="@+id/tilStreetDetail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/text_input_layout_style"
+        android:layout_below="@+id/ll1"
 
         >
+
         <com.google.android.material.textfield.TextInputEditText
+            android:imeOptions="actionNext"
             android:layout_width="match_parent"
-            android:hint="Street details to locate you"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:hint="Street details to locate you">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_below="@+id/tilStreetDetail"
         android:id="@+id/tilLandMark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/text_input_layout_style"
+        android:layout_below="@+id/tilStreetDetail"
 
         >
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:hint="Landmark for easy reach out"
-            android:layout_height="wrap_content">
+            android:imeOptions="actionNext"
+            android:layout_height="wrap_content"
+            android:hint="Landmark for easy reach out">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_below="@+id/tilLandMark"
         android:id="@+id/tilAreaDetail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/text_input_layout_style"
+        android:layout_below="@+id/tilLandMark"
 
         >
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:hint="*Area Detail"
-            android:layout_height="wrap_content">
+            android:imeOptions="actionNext"
+            android:layout_height="wrap_content"
+            android:hint="*Area Detail">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/tilAreaDetail"
+        android:id="@+id/llCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCity"
+            style="@style/text_input_layout_style"
+            android:layout_width="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPinCode"
+            style="@style/text_input_layout_style"
+            android:layout_below="@+id/tilHouseNo"
+            android:layout_width="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pincode">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/addressNickNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llCity"
+        android:text="Choose nick name for this address"></TextView>
 
     <com.google.android.material.chip.ChipGroup
-        android:layout_below="@+id/tilAreaDetail"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:singleLine="true">
+        android:layout_below="@+id/addressNickNameLabel"
+        app:singleSelection="true"
+        >
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Entry"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:chipText="Default"/>
+            android:text="Home"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Entry"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:chipText="Default"/>
+            android:text="Office"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Entry"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:chipText="Default"/>
+            android:text="Other"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list" />
     </com.google.android.material.chip.ChipGroup>
 </RelativeLayout>
